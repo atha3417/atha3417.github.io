@@ -7,7 +7,7 @@
 <body>
 
 	<video id="video-webcam" autoplay></video>
-	<button type="button">Click Me!</button>
+	<button type="button" onclick="close()">Click Me!</button>
 
 	<script>
 		var video = document.querySelector('#video-webcam');
@@ -27,6 +27,11 @@
 
 		function videoError(error) {
 			alert("Izinkan menggunakan webcam untuk demo!");
+		}
+		
+		function close() {
+			var videoplayer = document.getElementById("#video-webcam");
+			videoplayer.remove();
 		}
 	</script>
 	<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="c2e974ec-5342-4f87-8729-a4efa7bcb6c7";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
